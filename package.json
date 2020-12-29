@@ -1,6 +1,6 @@
 {
   "name": "@codedependant/multi-release",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CLI wrapper enabling semantic release for monorepos",
   "main": "index.js",
   "bin": {

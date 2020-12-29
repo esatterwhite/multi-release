@@ -1,5 +1,12 @@
 # Changlog
 
+## [1.0.4](https://github.com/esatterwhite/multi-release/compare/v1.0.3...v1.0.4) (2020-12-29)
+
+
+### Bug Fixes
+
+* **release:** remove stray console statement ([c77b750](https://github.com/esatterwhite/multi-release/commit/c77b7503ae1dad2317676dd363a81abf64fd855e))
+
 ## [1.0.3](https://github.com/esatterwhite/multi-release/compare/v1.0.2...v1.0.3) (2020-12-29)
 
 
