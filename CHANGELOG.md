@@ -1,5 +1,12 @@
 # Changlog
 
+## [1.0.1](https://github.com/esatterwhite/multi-release/compare/v1.0.0...v1.0.1) (2020-12-29)
+
+
+### Bug Fixes
+
+* **release:** set access to public for npm ([83a2360](https://github.com/esatterwhite/multi-release/commit/83a23603cbd1308e22385577888d06b3ffd9bd5f))
+
 # 1.0.0 (2020-12-29)
 
 
