@@ -1,0 +1,78 @@
+{
+  "name": "@codedependant/multi-release",
+  "version": "0.0.0",
+  "description": "CLI wrapper enabling semantic release for monorepos",
+  "main": "index.js",
+  "bin": {
+    "multi-release": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "tap",
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/esatterwhite/multi-release.git"
+  },
+  "keywords": [
+    "semantic-release",
+    "monorepo"
+  ],
+  "author": "Eric Satterwhite <esatterwhite@wi.rr.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/esatterwhite/multi-release/issues"
+  },
+  "homepage": "https://github.com/esatterwhite/multi-release#readme",
+  "tap": {
+    "100": true,
+    "esm": false,
+    "ts": false,
+    "jsx": false,
+    "timeout": 240,
+    "browser": false,
+    "output-file": ".tap",
+    "test-ignore": "*.sample",
+    "files": [
+      "test/integration/*.js"
+    ],
+    "nyc-arg": [
+      "--exclude=.git/",
+      "--exclude=*.sample"
+    ],
+    "coverage-report": [
+      "json",
+      "text",
+      "html",
+      "text-summary"
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "ignorePatterns": [
+      "node_modules/",
+      "coverage/",
+      ".git"
+    ],
+    "extends": "codedependant",
+    "parserOptions": {
+      "ecmaVersion": 2019
+    }
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "eslint-config-codedependant": "^2.0.0"
+  },
+  "dependencies": {
+    "debug": "^4.3.1",
+    "eslint": "^7.16.0",
+    "execa": "^5.0.0",
+    "multi-semantic-release": "^2.5.3",
+    "nopt": "^5.0.0",
+    "semantic-release": "^17.3.0",
+    "tap": "^14.11.0"
+  }
+}

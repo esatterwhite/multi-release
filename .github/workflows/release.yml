@@ -1,0 +1,68 @@
+name: Test + Release
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branch:
+      - master
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GIT_AUTHOR_NAME: 'Dependant Bot'
+  GIT_AUTHOR_EMAIL: 'release-bot@codedependant.net'
+  GIT_COMMITTER_NAME: 'Dependant Bot'
+  GIT_COMMITTER_EMAIL: 'release-bot@codedependant.net'
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  NPM_USERNAME: codedependant
+
+jobs:
+  test:
+    name: Test Suite
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: node ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: NPM Install
+        run: npm install
+      - name: test
+        run: npm test
+
+  test-release:
+    name: Release (dry run)
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm i
+
+      - name: Publish
+        run: npm run release -- --dry-run --no-ci --branches=${{github.head_ref}}
+
+  release:
+    name: Release
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.head_ref == 'main'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm i
+      - name: Publish
+        run: npm run release
