@@ -23,7 +23,6 @@ function typeOf(type) {
 function transform(commit) {
   commit.type = typeOf(commit.type)
   commit.shortHash = commit.hash.substring(0, 7)
-  console.dir(commit, {depth: 20})
   return commit
 }
 
