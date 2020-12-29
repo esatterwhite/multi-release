@@ -16,6 +16,9 @@
     "type": "git",
     "url": "git+ssh://git@github.com/esatterwhite/multi-release.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "semantic-release",
     "monorepo"
