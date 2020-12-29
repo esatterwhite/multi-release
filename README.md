@@ -5,11 +5,6 @@ The primary target case is for managing the release process of multi / mono repo
 
 ## Installation
 
-If you have not already authenticated with the GitHub packages registry for npm
-packages, please see the [internal blog post](https://logdna.blogin.co/single-post.php?id=98365) for
-details on how to do so. Once that is done, you can install the dependencies by
-running:
-
 ```shell
 $ npm install @codedependant/multi-release --save-dev
 ```
