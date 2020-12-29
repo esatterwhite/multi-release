@@ -1,5 +1,12 @@
 # Changlog
 
+## [1.0.3](https://github.com/esatterwhite/multi-release/compare/v1.0.2...v1.0.3) (2020-12-29)
+
+
+### Bug Fixes
+
+* **release:** remap releaes types ([6b054dd](https://github.com/esatterwhite/multi-release/commit/6b054dd9c84428a3af5323f06ffe2b67a9254dc0))
+
 ## [1.0.2](https://github.com/esatterwhite/multi-release/compare/v1.0.1...v1.0.2) (2020-12-29)
 
 ## [1.0.1](https://github.com/esatterwhite/multi-release/compare/v1.0.0...v1.0.1) (2020-12-29)
