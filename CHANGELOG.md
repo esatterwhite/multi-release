@@ -1,5 +1,12 @@
 # Changlog
 
+## [1.0.5](https://github.com/esatterwhite/multi-release/compare/v1.0.4...v1.0.5) (2020-12-29)
+
+
+### Chores
+
+* **doc:** update readme ([90aa100](https://github.com/esatterwhite/multi-release/commit/90aa1001dbc554f8683cf2aed4c2fe6d458d6187))
+
 ## [1.0.4](https://github.com/esatterwhite/multi-release/compare/v1.0.3...v1.0.4) (2020-12-29)
 
 
