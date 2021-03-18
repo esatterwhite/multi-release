@@ -1,5 +1,18 @@
 # Changlog
 
+## [1.0.6](https://github.com/esatterwhite/multi-release/compare/v1.0.5...v1.0.6) (2021-03-18)
+
+
+### Bug Fixes
+
+* **bin:** update workspace handling for latest versions ([4653806](https://github.com/esatterwhite/multi-release/commit/46538067a0760bc17f654383b8183d4f6de22bf4))
+
+
+### Chores
+
+* **deps:** multi-semantic-release@2.8.0 ([e617c1a](https://github.com/esatterwhite/multi-release/commit/e617c1ac627e6e92802aa7976c5585ff2e38ac0b))
+* **deps:** semantic-release@17.4.2 ([1abe609](https://github.com/esatterwhite/multi-release/commit/1abe609793dfc24bdd674cb5843ae243878df184))
+
 ## [1.0.5](https://github.com/esatterwhite/multi-release/compare/v1.0.4...v1.0.5) (2020-12-29)
 
 
