@@ -75,7 +75,7 @@
     "execa": "^5.0.0",
     "multi-semantic-release": "^2.8.0",
     "nopt": "^5.0.0",
-    "semantic-release": "^17.3.0",
+    "semantic-release": "^17.4.2",
     "tap": "^14.11.0"
   }
 }
