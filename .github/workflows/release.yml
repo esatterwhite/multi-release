@@ -50,7 +50,9 @@ jobs:
       - run: npm i
 
       - name: Publish
-        run: npm run release -- --dry-run --no-ci --branches=${{github.head_ref}}
+        run: npm run release -- --dry-run --no-ci --branches=${{github.head_ref}} --branches=${{github.ref}}
+        env:
+          GITHUB_EVENT_NAME: 'dummy'
 
   release:
     name: Release

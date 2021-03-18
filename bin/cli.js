@@ -4,7 +4,7 @@
 const debug = require('debug')
 const nopt = require('nopt')
 const multiSemanticRelease = require('multi-semantic-release/lib/multiSemanticRelease')
-const getWorkspaces = require('multi-semantic-release/lib/getWorkspacesYarn')
+const getPackagePaths = require('multi-semantic-release/lib/getPackagePaths')
 const multipkg = require('multi-semantic-release/package.json')
 const semanticpkg = require('semantic-release/package.json')
 const pkg = require('../package.json')
@@ -36,7 +36,7 @@ if (parsed.version) return console.log(pkg.version)
 if (parsed.debug) debug.enable('msr:*')
 
 const cwd = process.cwd()
-const paths = getWorkspaces(cwd)
+const paths = getPackagePaths(cwd)
 
 ;(async () => {
   console.log(`multi-release version: ${pkg.version}`)

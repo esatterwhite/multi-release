@@ -20,7 +20,7 @@ test('multi-release', async (t) => {
     , workspaces: ['packages/*']
     , release: {
         noCi: true
-      , branches: ['master']
+      , branches: ['main']
       , plugins: [
           '@semantic-release/commit-analyzer'
         , '@semantic-release/release-notes-generator'
@@ -88,9 +88,10 @@ test('multi-release', async (t) => {
       cwd: cwd
     , extendEnv: false
     , env: {
-        BRANCH_NAME: 'master'
-      , CI_BRANCH: 'master'
+        BRANCH_NAME: 'main'
+      , CI_BRANCH: 'main'
       , CI: 'false'
+      , GITHUG_REF: 'refs/heads/main'
       , PWD: process.env.PWD
       , DEBUG: process.env.DEBUG
       , PATH: process.env.PATH
@@ -124,7 +125,7 @@ test('multi-release', async (t) => {
     })
     t.rejects(
       execa('node', [cmd], {cwd: dir})
-    , /workspaces or workspaces.packages: must be non-empty array/gi
+    , /project must contain one or more workspace-packages/gi
     )
   })
 
@@ -144,7 +145,7 @@ test('selective release', async (t) => {
     , workspaces: ['services/*']
     , release: {
         noCi: true
-      , branches: ['master']
+      , branches: ['main']
       , plugins: [
           '@semantic-release/commit-analyzer'
         , '@semantic-release/release-notes-generator'
@@ -186,9 +187,10 @@ test('selective release', async (t) => {
       cwd: cwd
     , extendEnv: false
     , env: {
-        BRANCH_NAME: 'master'
-      , CI_BRANCH: 'master'
+        BRANCH_NAME: 'main'
+      , CI_BRANCH: 'main'
       , CI: 'false'
+      , GITHUG_REF: 'refs/heads/main'
       , PWD: process.env.PWD
       , DEBUG: process.env.DEBUG
       , PATH: process.env.PATH
@@ -215,8 +217,8 @@ test('selective release', async (t) => {
       cwd: cwd
     , extendEnv: false
     , env: {
-        BRANCH_NAME: 'master'
-      , CI_BRANCH: 'master'
+        BRANCH_NAME: 'main'
+      , CI_BRANCH: 'main'
       , CI: 'false'
       , PWD: process.env.PWD
       , DEBUG: process.env.DEBUG
