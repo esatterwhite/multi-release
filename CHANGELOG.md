@@ -1,5 +1,20 @@
 # Changlog
 
+## [1.0.7](https://github.com/esatterwhite/multi-release/compare/v1.0.6...v1.0.7) (2022-03-06)
+
+
+### Chores
+
+* **deps:** multi-semantic-release@2.11.1 ([0c9d45a](https://github.com/esatterwhite/multi-release/commit/0c9d45af1a93f8585eaeb410fb0dcb6104cee16b))
+* **deps:** semantic-release/changelog@6.0.1 ([dfe6290](https://github.com/esatterwhite/multi-release/commit/dfe6290019731e5f016621855c727a9bd3a41d32))
+* **deps:** semantic-release/git@10.0.1 ([50d53e2](https://github.com/esatterwhite/multi-release/commit/50d53e20362f8970d2ce244a048d997ef1eea09f))
+* **dep:** tap@16.0.0 ([1e68f35](https://github.com/esatterwhite/multi-release/commit/1e68f35841f51f3fc2fa04ef0f3aad6bf0390a94))
+
+
+### Miscellaneous
+
+* chore(deps)!: semantic-release@19.0.2 ([e928917](https://github.com/esatterwhite/multi-release/commit/e92891759a372871b94cad97ec88b0e0ff09277a))
+
 ## [1.0.6](https://github.com/esatterwhite/multi-release/compare/v1.0.5...v1.0.6) (2021-03-18)
 
 
