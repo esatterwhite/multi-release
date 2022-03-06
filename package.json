@@ -31,7 +31,6 @@
   "homepage": "https://github.com/esatterwhite/multi-release#readme",
   "tap": {
     "100": true,
-    "esm": false,
     "ts": false,
     "jsx": false,
     "timeout": 240,
@@ -67,7 +66,9 @@
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
-    "eslint-config-codedependant": "^2.0.0"
+    "eslint-config-codedependant": "^2.0.0",
+    "eslint-plugin-node": "^11.1.0",
+    "tap": "^16.0.0"
   },
   "dependencies": {
     "debug": "^4.3.1",
@@ -75,7 +76,6 @@
     "execa": "^5.0.0",
     "multi-semantic-release": "^2.11.1",
     "nopt": "^5.0.0",
-    "semantic-release": "^19.0.2",
-    "tap": "^14.11.0"
+    "semantic-release": "^19.0.2"
   }
 }
